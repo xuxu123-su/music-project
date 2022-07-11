@@ -1,0 +1,14 @@
+<view>
+  <view style="height: {{barHeight}}px;"></view>
+  <view class="nav" style="height: {{navBarHeight}}px;">
+    <view class="left" bindtap="backClick">
+      <view class="slot"><slot name="left"></slot></view>
+      <van-icon class="icon" name="arrow-left"/>
+    </view>
+    <view class="center">
+      <view class="center-slot"><slot name="title"></slot></view>
+      <view class="center-title">{{title}}</view>
+    </view>
+    <view class="right"></view>
+  </view>
+</view>

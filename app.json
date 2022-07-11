@@ -1,0 +1,39 @@
+{
+    "pages": [
+        "pages/home_music/index",
+        "pages/home_video/index",
+        "pages/song-nav/index",
+        "pages/music-plary/index",
+        "pages/detail-song/index",
+        "pages/search/index",
+        "pages/play_video/index",
+        "pages/home-profile/index"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fafafa",
+        "navigationBarTitleText": "Vulgar-Music",
+        "navigationBarTextStyle": "black"
+    },
+    "requiredBackgroundModes": [
+        "audio"
+    ],
+    "tabBar": {
+        "list": [
+            {
+                "pagePath": "pages/home_music/index",
+                "text": "音乐",
+                "iconPath": "assets/images/tabbar/music_normal.png",
+                "selectedIconPath": "assets/images/tabbar/music_active.png"
+            },
+            {
+                "pagePath": "pages/home_video/index",
+                "text": "视频",
+                "iconPath": "assets/images/tabbar/video_normal.png",
+                "selectedIconPath": "assets/images/tabbar/video_active.png"
+            }
+        ]
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
+}

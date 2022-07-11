@@ -1,0 +1,11 @@
+<wxs src="/utils/format.wxs" module="format"></wxs>
+<view class="item" bindtap="boxClick" data-item="{{item}}">
+  <view class="info">
+    <image class="image" src="{{item.coverImgUrl}}" mode="widthFix"></image>
+    <view class="play">
+      <van-icon name="service-o"></van-icon>
+      {{format.format(item.playCount)}}
+      </view>
+  </view>
+  <view class="title">{{item.description}}</view>
+</view>

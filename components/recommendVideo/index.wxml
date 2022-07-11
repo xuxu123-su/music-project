@@ -1,0 +1,15 @@
+<wxs src="../../utils/format.wxs" module="format"></wxs>
+<view class="item">
+  <!-- 左边 -->
+  <view class="album">
+    <image class="image" mode="widthFix" src="{{item.coverUrl}}"></image>
+    <view class="info">
+      <text class="count">{{format.format(item.playTime)}}</text>
+    </view>
+  </view>
+  <!-- 右边 -->
+  <view class="content">
+    <view class="title">{{item.title}}</view>
+    <view class="nickname">{{item.creator[0].userName}}</view>
+  </view>
+</view>

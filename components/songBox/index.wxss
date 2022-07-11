@@ -1,0 +1,34 @@
+.item {
+  width: 100%;
+  margin-bottom: 30rpx;
+}
+
+.info {
+  position: relative;
+  border-radius: 20rpx;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+}
+
+.play {
+  position: absolute;
+  top: 10rpx;
+  right: 10rpx;
+  font-size: 22rpx;
+  color: #fff;
+  border-radius: 20rpx;
+  padding: 6rpx;
+  background: rgba(0, 0, 0, .3);
+}
+
+.title {
+  font-size: 26rpx;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

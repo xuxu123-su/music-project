@@ -1,0 +1,13 @@
+<view class="menu-item">
+  <!-- 歌单图片 -->
+  <view class="content">
+    <image class="image" src="{{item.coverImgUrl}}" mode="widthFix"></image>
+    <view class="info">
+      <text>{{format.format(item.playCount)}}</text>
+    </view>
+  </view>
+  <!-- 歌单简介 -->
+  <view class="nav">
+    {{item.name}}
+  </view>
+</view>

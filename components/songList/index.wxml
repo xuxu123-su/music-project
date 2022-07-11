@@ -1,0 +1,13 @@
+<view class="item" bindtap="songClick">
+  <view class="left">
+    <image class="atavaul" src="{{item.al.picUrl}}" mode="widthFix"></image>
+  </view>
+  <view class="right">
+    <view class="title">{{item.name}}</view>
+    <view class="nav">
+      <image class="icon" src="{{iconUrl}}"></image>
+      <text>{{item.ar[0].name}}</text>
+      <view class="introduce" wx:if="{{item.alia.length > 0}}">· {{item.alia[0]}}</view>
+    </view>
+  </view>
+</view>

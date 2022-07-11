@@ -1,0 +1,43 @@
+<view class="home">
+  <van-search value="{{value}}"
+              background="#f7f7f7"
+              shape="round"
+              bind:change="searchChange"
+              bind:search="searchClick"
+              class="search"
+  ></van-search>
+
+  <!-- 热门搜索 -->
+  <view class="hot" wx:if="{{!value.length && !suggest.length}}">
+    <area-header title="热门搜索"
+                showRight="{{false}}"
+                weight="600"></area-header>
+    <view class="key">
+      <block wx:for="{{hotKey}}" wx:key="first">
+        <view class="tag" bindtap="itemClick" data-item="{{item.first}}">
+          <text class="num">{{index+1}}</text>
+          {{item.first}}
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <!-- 建议搜索 -->
+  <view class="suggest" wx:elif="{{suggest.length && !result.length}}">
+    <view class="title">搜索"{{value}}"</view>
+    <view class="list">
+      <block wx:for="{{suggest}}" wx:key="keyword">
+        <view class="item" bindtap="itemClick" data-item="{{item.keyword}}">
+          <van-icon name="search"></van-icon>
+          <!-- <text class="text">{{item.keyword}}</text> -->
+          <rich-text class="text" nodes="{{songSuggest[index]}}"></rich-text>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <!-- 搜索结果 -->
+  <view wx:elif="{{result.length}}">
+    <search-item item="{{result}}"></search-item>
+  </view>
+</view>

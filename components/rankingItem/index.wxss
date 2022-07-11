@@ -1,0 +1,64 @@
+.item {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 230rpx;
+  background-color: #eee;
+  border-radius: 12rpx;
+  overflow: hidden;
+  margin-bottom: 20rpx;
+}
+
+.left {
+  padding: 24rpx;
+  flex: 1;
+  overflow: hidden;
+}
+
+.title {
+  font-size: 34rpx;
+  font-weight: 600;
+  margin-bottom: 20rpx;
+}
+
+.content {
+  font-size: 24rpx;
+  width: 100%;
+  margin-top: 6rpx;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  display: -moz-box;
+  -moz-line-clamp: 2;
+  -moz-box-orient: vertical;
+  word-wrap: break-word;
+  word-break: break-all;
+  white-space: normal;
+  overflow: hidden;
+}
+
+.singer {
+  color: #999;
+}
+
+.right {
+  position: relative;
+  width: 230rpx;
+  display: flex;
+}
+
+.image {
+  width: 100%;
+}
+
+.play {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: #fff;
+  font-size: 22rpx;
+  border-radius: 12rpx;
+  padding: 6rpx 10rpx;
+  background: rgba(0,0,0,.5);
+}

@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "recommend-video": "/components/recommendVideo/index",
+        "van-icon": "@vant/weapp/icon/index"
+    }
+}

@@ -1,0 +1,15 @@
+<view class="box">
+  <view class="header">
+    <van-icon name="music-o" style="margin-right: 10rpx;"></van-icon>单曲
+  </view>
+  <view wx:for="{{item}}" wx:key="id" class="item">
+    <view class="num">{{index+1}}</view>
+    <view class="content">
+      <view class="name">{{item.name}}</view>
+      <view class="nav">
+        <image class="image" src="{{iconUrl}}" mode="widthFix"></image>
+        <view class="title">{{item.artists[0].name}}  {{item.alias[0]}}</view>
+      </view>
+    </view>
+  </view>
+</view>

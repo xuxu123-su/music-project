@@ -1,0 +1,10 @@
+<wxs src="/utils/format.wxs"  module="format"></wxs>
+<view>
+  <scroll-view scroll-x class="menu-list">
+    <block wx:for="{{songMenu}}" wx:key="id">
+      <song-menu item="{{item}}"
+                 bindtap="menuClick"
+                 data-item="{{item}}"></song-menu>
+    </block>
+  </scroll-view>
+</view>

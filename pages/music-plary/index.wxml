@@ -1,0 +1,102 @@
+<wxs src="../../utils/format.wxs" module="format"></wxs>
+
+<image class="image" src="{{currentSong.al.picUrl}}" mode="aspectFill"></image>
+<view class="cover"></view>
+<!-- 导航栏 -->
+<nav-bar bind:click='navClick'>
+  <view slot="title" class="tab">
+    <block wx:for="{{banner}}" wx:key="index">
+      <view
+        class="divider {{page === index ? 'active' : ''}}"
+        bindtap="tabClick"
+        data-index="{{index}}">{{item}}</view>
+    </block>
+  </view>
+</nav-bar>
+
+<swiper
+  style="height: {{countHeight}}px;"
+  current="{{currentIndex}}"
+  bindchange="swiperChange">
+
+  <!-- 推荐 -->
+  <swiper-item>1</swiper-item>
+
+  <!-- 歌曲详情 -->
+  <swiper-item class="content">
+    <!-- 背景图 -->
+    <view class="bg">
+      <i class="iconfont icon-yinle1 icon one"></i>
+      <i class="iconfont icon-shezhi1 icon two"></i>
+      <i class="iconfont icon-a-kongzhitaitiaoyintai three"></i>
+      <i class="iconfont icon-shezhi four"></i>
+      <view class="bg-img">
+        <image class="bg-imgs" src="{{currentSong.al.picUrl}}" mode="widthFix"></image>
+      </view>
+    </view>
+    <!-- 歌曲信息 -->
+    <view class="info">
+      <view class="title">{{currentSong.al.name}}</view>
+      <view class="subtitle">
+          <view class="singer">
+            {{currentSong.ar[0].name}}
+            <text class="standard">标准</text>
+            <text class="singer_music">音乐</text>
+          </view>
+          <view class="alias">专辑：{{currentSong.alia[0]}}</view>
+        </view>
+    </view>
+    <!-- 歌词 -->
+    <view class="lyric">
+      <view class="firstLyric">{{firstLyricText}}</view>
+      <view class="lastLyric">{{lastLyricText}}</view>
+    </view>
+    <!-- 进度 -->
+    <view class="schedule">
+      <slider
+        block-size="{{12}}"
+        value="{{sliderValue}}"
+        bindchanging="sliderChanging"
+        bindchange="sliderChange"></slider>
+      <view class="time">
+        <view class="current">{{format.dateTime(currentTime)}}</view>
+        <view class="duration">{{format.dateTime(durationTime)}}</view>
+      </view>
+    </view>
+    <!-- 操作 -->
+    <view class="operation">
+      <image class="btn btn-mode"
+             src="/assets/images/player/play_{{playName}}.png"
+             bindtap="handleBtnClick">
+      </image>
+      <image class="btn btn-prev"
+             src="/assets/images/player/play_prev.png"
+             bindtap="prevBtnClick">
+      </image>
+      <image class="btn btn-pause"
+             src="/assets/images/player/play_{{playingName}}.png"
+             bindtap="handlePlaying">
+      </image>
+      <image class="btn btn-next"
+             src="/assets/images/player/play_next.png"
+             bindtap="nextBtnClick">
+      </image>
+      <image class="btn btn-music" src="/assets/images/player/play_music.png"></image>
+    </view>
+  </swiper-item>
+
+  <!-- 歌词 -->
+  <swiper-item>
+    <scroll-view
+      class="lyric-list"
+      scroll-y
+      scroll-top="{{lyricScrollTop}}"
+      scroll-with-animation>
+      <block wx: wx:for="{{lyricInfo}}" wx:key="index">
+        <view
+          class="item {{firstIndex === index ? 'actives' : ''}}"
+          style="padding-top: {{index === 0 ? (countHeight / 2 - 160) : 0}}px; padding-bottom: {{index === lyricInfo.length - 1 ? (countHeight / 2)  : 0}}px;">{{item.text}}</view>
+      </block>
+    </scroll-view>
+  </swiper-item>
+</swiper>

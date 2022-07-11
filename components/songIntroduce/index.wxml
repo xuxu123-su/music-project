@@ -1,0 +1,48 @@
+<wxs src="/utils/format.wxs" module="format"></wxs>
+<view class="header">
+  <!-- 背景 aspectFill填充 -->
+  <image class="bg-image" src="{{songList.coverImgUrl}}" mode="aspectFill"></image>
+  <!-- 遮盖层 -->
+  <view class="bg-cover"></view>
+  <!-- 内容 -->
+  <view class="content">
+    <image class="image" src="{{songList.coverImgUrl}}" mode="aspectFill"></image>
+    <view class="play">
+    <van-icon name="service-o"></van-icon>
+    {{format.format(songList.playCount)}}
+    </view>
+    <view class="info">
+      <view class="title">{{songList.name}}</view>
+      <view class="anthor">
+        <image class="avatar" src="{{songList.creator.avatarUrl}}" mode="aspectFill"></image>
+        <text class="nickname">{{songList.creator.nickname}}</text>
+      </view>
+      <!-- 简介 -->
+      <view class="desc">简介：{{songList.description}}</view>
+    </view>
+  </view>
+  <!-- 收藏评论分享 -->
+  <view class="operation">
+    <!-- 收藏数 -->
+    <view class="item">
+      <view class="icon">
+        <van-icon name="star-o" size="18"/>
+        <text class="text">{{ songList.subscribedCount == 0 ? "收藏" : format.format(songList.subscribedCount) }}</text>
+      </view>
+    </view>
+    <!-- 评论数 -->
+    <view class="item">
+      <view class="icon">
+        <van-icon name="chat-o" size="18"/>
+        <text class="text">{{ songList.subscribedCount == 0 ? "收藏" : format.format(songList.commentCount) }}</text>
+      </view>
+    </view>
+    <!-- 分享数 -->
+    <view class="item">
+      <view class="icon">
+        <van-icon name="share-o" size="18"/>
+        <text class="text">{{ songList.subscribedCount == 0 ? "收藏" : format.format(songList.trackCount) }}</text>
+      </view>
+    </view>
+  </view>
+</view>

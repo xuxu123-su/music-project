@@ -1,0 +1,38 @@
+.navbar {
+  width: 100%;
+}
+
+.image {
+  position: relative;
+  width: 100%;
+}
+
+.rank {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  right: 0;
+}
+
+.bg-image {
+  width: 100vw;
+}
+
+.title {
+  width: auto;
+  border-bottom: 1rpx solid #ccc;
+  border-radius: 30rpx 30rpx 0 0;
+  padding: 20rpx 26rpx;
+  background-color: #fff;
+}
+
+.title-text {
+  font-size: 36rpx;
+  font-weight: 600;
+  margin-left: 16rpx;
+}
+
+.title-length {
+  font-size: 26rpx;
+  color: #666;
+}

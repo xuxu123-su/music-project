@@ -1,0 +1,48 @@
+.item {
+  display: flex;
+  height: 100rpx;
+  overflow: hidden;
+  padding: 0 26rpx;
+  margin-top: 30rpx;
+}
+
+.left {
+  width: 100rpx;
+}
+
+.atavaul {
+  width: 100%;
+  border-radius: 12rpx;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex: 1;
+  margin-left: 30rpx;
+}
+
+.title {
+  font-size: 28rpx;
+}
+
+.nav {
+  display: flex;
+  font-size: 22rpx;
+  color: #666;
+}
+
+.icon {
+  width: 38rpx;
+  height: 22rpx;
+  margin: 4rpx 10rpx 0 0;
+}
+
+.introduce {
+  width: 50vw;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-left: 10rpx;
+}

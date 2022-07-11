@@ -1,0 +1,12 @@
+<view class="header">
+  <view class="title" style="font-weight: {{weight}};">{{title}}</view>
+  <view class="right" wx:if="{{showRight}}" bindtap="moreChange">
+    <!-- 设置插槽 -->
+    <view class="slot"><slot></slot></view>
+    <!-- 默认显示 -->
+    <view class="default">
+      <text>{{rightText}}</text>
+    </view>
+    <image class="icon" src="/assets/images/icons/arrow-right.png"></image>
+  </view>
+</view>

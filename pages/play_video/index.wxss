@@ -1,0 +1,36 @@
+page {
+  padding-top: 450rpx;
+}
+
+.video {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.content {
+  padding: 20rpx;
+}
+
+.wrapper {
+  font-weight: 700;
+}
+
+.name {
+  margin: 10rpx 0;
+  font-size: 30rpx;
+}
+
+.nav {
+  font-size: 24rpx;
+  color: #666;
+}
+
+.nav-right {
+  margin-left: 20rpx;
+}
+
+.recommend {
+  font-weight: 700;
+  margin: 20rpx 0;
+}

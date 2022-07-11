@@ -1,0 +1,49 @@
+.menu-item {
+  display: inline-block;
+  vertical-align: top;
+  width: 200rpx;
+  height: 280rpx;
+  margin-left: 20rpx;
+}
+
+.menu-item:last-of-type {
+  margin-right: 20rpx;
+}
+
+.content {
+  position: relative;
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.image {
+  width: 100%;
+  border-radius: 12rpx;
+}
+
+.info {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: 22rpx;
+  color: #fff;
+  background: rgba(0,0,0, .5);
+  padding: 5rpx;
+  border-radius: 12rpx;
+}
+
+.nav {
+  width: 100%;
+  font-size: 26rpx;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -moz-box;
+  -moz-line-clamp: 2;
+  -moz-box-orient: vertical;
+  word-wrap: break-word;
+  word-break: break-all;
+  white-space: normal;
+  overflow: hidden;
+}

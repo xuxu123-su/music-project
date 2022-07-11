@@ -1,0 +1,60 @@
+.box {
+  width: 100%;
+  background-color: #fff;
+  position: absolute;
+  top: 88rpx;
+  left: 0;
+  right: 0;
+}
+
+.header {
+  padding: 20rpx 10rpx;
+  font-size: 32rpx;
+  font-weight: 600;
+  margin-top: 20rpx;
+}
+
+.item {
+  display: flex;
+  height: 80rpx;
+  margin-bottom: 30rpx;
+  border-top: 1rpx solid #eee;
+}
+
+.num {
+  width: 60rpx;
+  line-height: 100rpx;
+  text-align: center;
+}
+
+.content {
+  flex: 1;
+  height: 100rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.name {
+  font-size: 26rpx;
+}
+
+.nav {
+  display: flex;
+  font-size: 22rpx;
+  color: #333;
+  align-items: center;
+}
+
+.image {
+  width: 36rpx;
+  vertical-align: middle;
+}
+
+.title {
+  width: 80%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-left: 16rpx;
+}

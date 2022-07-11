@@ -1,0 +1,28 @@
+<view>
+  <!-- 推荐歌单展示图片 -->
+  <view wx:if="{{state}}" class="navbar">
+    <image class="image" src="{{imgUrl}}" mode="widthFix"></image>
+  </view>
+  <!-- 巅峰榜标题 -->
+  <block wx:if="{{type === 'rank' && !state}}">
+    <image class="bg-image" src="{{songInfo.coverImgUrl}}" mode="aspectFill"></image>
+  </block>
+  <!-- 歌单 -->
+  <block wx:elif="{{type === 'menu'}}">
+    <song-introduce songList="{{songInfo}}" list="{{list}}"></song-introduce>
+  </block>
+  <!-- 推荐歌单样式 -->
+  <view class="{{state ? 'rank' : ''}}">
+    <view class="title" wx:if="{{state}}">
+      <van-icon name="music-o" size="20"></van-icon>
+      <text class="title-text">{{songInfo.name}}</text>
+      <text class="title-length">({{songInfo.tracks.length}})</text>
+    </view>
+    <block wx:for="{{songInfo.tracks}}" wx:key="id">
+      <song-list item="{{item}}"
+                 bindtap="handleSongClick"
+                 data-index="{{index}}">
+      </song-list>
+    </block>
+  </view>
+</view>

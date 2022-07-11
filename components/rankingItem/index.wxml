@@ -1,0 +1,16 @@
+<wxs src="../../utils/format.wxs" module="format"></wxs>
+<view class="item">
+  <view class="left">
+    <view class="title">{{item.name}}</view>
+    <block wx:for="{{3}}" wx:for-item="index" wx:key="*this">
+      <view class="content">
+        <text>{{index + 1}}、{{item.songList[index].name}}</text>
+        <text class="singer"> - {{item.songList[index].ar[0].name}}</text>
+      </view>
+    </block>
+  </view>
+  <view class="right">
+    <image src="{{item.coverImgUrl}}" mode="widthFix"></image>
+    <view class="play">{{format.format(item.playCount)}}</view>
+  </view>
+</view>

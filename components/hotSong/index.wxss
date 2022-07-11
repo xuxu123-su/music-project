@@ -1,0 +1,6 @@
+.menu-list {
+  width: 100vw;
+  white-space: nowrap;
+  position: relative;
+  left: -20rpx;
+}

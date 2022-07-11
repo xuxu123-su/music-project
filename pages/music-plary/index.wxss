@@ -1,0 +1,237 @@
+page {
+  color: #fff;
+}
+
+.image,
+.cover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.cover {
+  background: rgba(0, 0, 0, .5);
+  backdrop-filter: blur(50rpx);
+}
+
+/* 自定义导航 */
+.tab {
+  display: flex;
+  font-size: 28rpx;
+  color: #999;
+}
+
+.divider {
+  border-right: 1rpx solid #999;
+  padding: 0 20rpx;
+}
+
+.divider:last-child {
+  border-right: 0 !important;
+}
+
+.active {
+  color: #fff;
+}
+
+/* 歌曲 */
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 30rpx 60rpx;
+}
+
+/* 背景图 */
+.bg {
+  flex: 5;
+  position: relative;
+  border-radius: 20rpx;
+  padding: 50rpx;
+  background: -webkit-linear-gradient(#e8ecf7, #cbd1e7);
+  background: -o-linear-gradient(#e8ecf7, #cbd1e7);
+  background: -moz-linear-gradient(#e8ecf7, #cbd1e7);
+  background: linear-gradient(#e8ecf7, #cbd1e7);
+}
+
+.one {
+  position: absolute;
+  top: 25rpx;
+  left: 25rpx;
+}
+
+.two {
+  position: absolute;
+  top: 25rpx;
+  right: 25rpx;
+}
+
+.three {
+  position: absolute;
+  bottom: 25rpx;
+  left: 25rpx;
+}
+
+.four {
+  position: absolute;
+  bottom: 25rpx;
+  right: 25rpx;
+}
+
+/* animation: rotate 15s infinite linear; */
+/* 旋转 */
+/* @keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+.bg-imgs {
+  position: absolute;
+  width: 50vw;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* 歌曲信息 */
+.info {
+  margin: 60rpx 0 40rpx;
+}
+
+.content .info .title {
+  font-size: 48rpx;
+  font-weight: 700;
+}
+
+.content .info .singer, .content .info .alias {
+  font-size: 26rpx;
+  color: #ccc;
+  margin: 16rpx 0;
+}
+
+.alias {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.standard,
+.singer_music {
+  font-size: 22rpx;
+  background-color: #444;
+  padding: 5rpx 10rpx;
+  border-radius: 12rpx;
+}
+
+.standard {
+  margin: 0 20rpx;
+}
+
+/* 歌词 */
+.content .lyric {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.content .lyric .firstLyric {
+  font-size: 28rpx;
+  color: #eee;
+}
+
+.content .lyric .lastLyric {
+  font-size: 36rpx;
+  color: aqua;
+}
+
+/* 进度 */
+.progress {
+  margin: 10rpx 0;
+}
+
+.slider {
+  margin: 0 0 18rpx 20rpx;
+}
+
+.time {
+  display: flex;
+  justify-content: space-between;
+  color: #ccc;
+  font-size: 22rpx;
+}
+
+.time .current {
+  margin-left: 10rpx;
+}
+
+
+/* 操作css */
+.operation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20rpx 0 30rpx;
+}
+
+.operation .btn {
+  display: inline-block;
+  width: 60rpx;
+  height: 60rpx;
+  padding: 0;
+}
+
+.operation .btn-mode {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.operation .btn-pause {
+  width: 130rpx;
+  height: 130rpx;
+}
+
+/* 歌词 */
+.lyric-list {
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.schedule {
+  margin-top: 20rpx;
+}
+
+.item {
+  height: 35px;
+  line-height: 35px;
+  font-size: 28rpx;
+  text-align: center;
+  color: #989898;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.item.actives {
+  color: #26ce8a;
+  font-size: 34rpx;
+}
